@@ -1,4 +1,4 @@
-"""mykoala URL Configuration
+"""koala URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,12 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import koala_app.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('outside/', koala_app.views.outside, name = 'outside'),
-    path('', koala_app.views.main, name='main'),
-    #path('', koala_app.views.home, name="home"),
-
 ]
