@@ -17,3 +17,6 @@ def outside_detail(request):
 def inside_detail(request):
     return render(request, 'inside_detail.html')
 
+def home(request):
+    return render(request, 'mainpage.html')
+

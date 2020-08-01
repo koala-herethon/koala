@@ -24,6 +24,6 @@ urlpatterns = [
     path('inside/', koala_app.views.inside, name='inside'),
     path('inside_detail/', koala_app.views.inside_detail, name='inside_detail'),
     path('main/', koala_app.views.main, name = 'main'),
-    #path('', koala_app.views.home, name="home"),
+    path('', koala_app.views.home, name="home"),
 
 ]
