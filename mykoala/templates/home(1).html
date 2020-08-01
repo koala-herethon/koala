@@ -15,97 +15,149 @@
 <link rel="stylesheet" href="/mykoala/static/home1style.css" type="text/css"> 
 
 <style>
+  .navbar{
+    background-color : #B3A7AD;
+  }
+
   .search{
     margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-   
-}
-.content{
-    margin-top: 200px;
+   }
+   .content{
+    margin-top: 20px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .content > button{
-    margin-left: 50px;
+    margin-left: 10px;
+    background-color: #B3a7ad;
 }
 
-.footer{
-    position:absolute;
-    left:0;
-    bottom:0;
-    width:100%;
-    padding:15px 0;
-    text-align: center;
-    color: white;
-    background: rgb(100, 88, 114);
+body{
+  background-color: #E2DAEC;
 }
+
 </style>
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">KOALA</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Outside<span class="sr-only">(current)</a>
-        </li>
-        <!--
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      -->
-      <!--
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      -->
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
+    <!--header-->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">  
+       <a class="navbar-brand" href="#">Koala</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inside <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Outside <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+      </nav>
+      </header>
 
   <div class="search">
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
 
-  <div class="content">
-    <button type="button" class="btn btn-primary btn-lg">요리</button>
-    <button type="button" class="btn btn-secondary btn-lg">그림</button>
-    <button type="button" class="btn btn-primary btn-lg">홈트</button>
-    <button type="button" class="btn btn-secondary btn-lg">게임</button>
-    <button type="button" class="btn btn-primary btn-lg">악기</button>
-    <button type="button" class="btn btn-secondary btn-lg">공예</button>
+  <div class="content" >
+    <button type="button" class="btn btn-light btn-sm">요리</button>
+    <button type="button" class="btn btn-secondary btn-sm">그림</button>
+    <button type="button" class="btn btn-light btn-sm">홈트</button>
+    <button type="button" class="btn btn-secondary btn-sm">게임</button>
+    <button type="button" class="btn btn-light btn-sm">악기</button>
+    <button type="button" class="btn btn-secondary btn-sm">공예</button>
   </div>
 
-  <div class="footer">
-    <p>LIKELION</p>
+  <div class="container">
+    <div class="card-deck mb-3 text-center">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header" style="background-color: #b3a7ad;">
+          <h4 class="my-0 font-weight-normal" >음악</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><img src = "music.PNG"></li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-light" style="background-color: #acbfdf;">더 알아보기</button>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header" style="background-color: #acbfdf;">
+          <h4 class="my-0 font-weight-normal" >드로잉</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><img src = "/static/img/music.PNG"></li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-light" style="background-color: #b3a7ad;">더 알아보기</button>
+        </div>
+      </div>
+
+      <div class="card mb-4 shadow-sm">
+        <div class="card-header" style="background-color: #b3a7ad;">
+          <h4 class="my-0 font-weight-normal" >요리</h4>
+        </div>
+        <div class="card-body">
+          <ul class="list-unstyled mt-3 mb-4">
+            <li><img scr = "/static/img/music.png"></li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-light" style="background-color: #b3a7ad;">더 알아보기</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img class="mb-2" src="../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+          <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Cool stuff</a></li>
+            <li><a class="text-muted" href="#">Random feature</a></li>
+            <li><a class="text-muted" href="#">Team feature</a></li>
+            <li><a class="text-muted" href="#">Stuff for developers</a></li>
+            <li><a class="text-muted" href="#">Another one</a></li>
+            <li><a class="text-muted" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Resource</a></li>
+            <li><a class="text-muted" href="#">Resource name</a></li>
+            <li><a class="text-muted" href="#">Another resource</a></li>
+            <li><a class="text-muted" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Team</a></li>
+            <li><a class="text-muted" href="#">Locations</a></li>
+            <li><a class="text-muted" href="#">Privacy</a></li>
+            <li><a class="text-muted" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
 
 
