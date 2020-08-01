@@ -23,14 +23,18 @@
  
     <!--카카오맵-->
     <style>
+        @font-face { font-family: 'NIXGONL-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONL-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+        h2,select,label {font-family: 'NIXGONL-Vb';}
         .navbar{
             background-color : #B3A7AD;
         }
         .map_wrap {position:relative;width:100%;height:350px;}
         .title {font-weight:bold;display:block;}
-        .hAddr {position:absolute;left:10px;top:10px;border-radius: 2px;background:#fff;background:rgba(255,255,255,0.8);z-index:1;padding:5px;}
+        .hAddr {position:absolute;left:10px;top:10px;border-radius: 2px;background:#E2DAEC;z-index:1;padding:5px;}
         #centerAddr {display:block;margin-top:2px;font-weight: normal;}
         .bAddr {padding:5px;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+
 
         body{
             background-color: #E2DAEC;
@@ -63,7 +67,7 @@
 
         <!--코스 선택 폼-->
     
-        <h2 class="w3-container w3-center">코스 선택</h2>
+        <h2 class="w3-container w3-center" style="padding-top: 100px;">코스 선택</h2>
         <br>
         <form action="outside.html" class="w3-container w3-center">
             
@@ -108,8 +112,8 @@
                 </div>
             <br>
                 <div class="map_wrap" style="width: 700px; height: 400px;" >
-                    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-                    <div class="hAddr">
+                    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;margin-left:400px; "></div>
+                    <div class="hAddr" style="background-color: #E2DAEC;">
                         <span id="centerAddr"></span>
                     </div>
                 </div>
@@ -188,16 +192,14 @@
             }
             </script>
         </div>
-<<<<<<< HEAD
-   
-=======
+
         <br>
         <div class="map_wrap" style="width: 600px ;" class="w3-container w3-center">
             <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
             <div class="hAddr">
                 <span id="centerAddr" ></span>
             </div>
->>>>>>> 3ce256b47538f1bc92d130537f8db5136fd7cbfe
+
         </div>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
