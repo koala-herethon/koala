@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import koala_prj.views
+import koala_app.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('outside/', koala_prj.views.outside, name = 'outside'),
+    path('outside/', koala_app.views.outside, name = 'outside'),
     #path('', koala_app.views.home, name="home"),
 ]

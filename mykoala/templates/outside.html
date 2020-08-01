@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="/mykoala/static/outside.css" type="text/css">
+    <link rel="stylesheet" href="/static/outside.css" type="text/css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
           <a class="navbar-brand" href="#">
-                <img src="/mykoala/static/img/logo.png" alt="코알라">
+                <img src="/static/img/logo_nobg.png" alt="코알라" style="height: 70px;">
               </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,8 @@
           </div>
         </div>
     </nav>
-
+        
+        <br>
         <div>    
 
         <!--코스 선택 폼-->
@@ -72,24 +73,25 @@
                 <option value = "drink" class = "item">마실 곳</option>
             </select>
 
-            <br>
+            <br><br>
             <input type = "checkbox" id = "alone" name="alone" checked>
-            <label for = "alone"> 혼자 놀래 </label>
+            <label for = "alone"> 혼자 놀래 😁</label>
         </form>
         </div>
 
+        <br><br><br><br><br>
         <div>
             <h2 class="w3-container w3-center">지역 설정</h2>
         </div>
-        <div class="map_wrap">
+        <br>
+        <div class="map_wrap" style="width: 600px ;" class="w3-container w3-center">
             <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
             <div class="hAddr">
-                <span class="title">지도중심기준 행정동 주소정보</span>
                 <span id="centerAddr"></span>
             </div>
         </div>
         
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9deb056ec35fafb4843f462a724042ac&libraries=services"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2feabaa50bda547fa9bf346b93e3003&libraries=services"></script>
         <script>
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
