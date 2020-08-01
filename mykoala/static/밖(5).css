@@ -47,6 +47,7 @@ div {
     list-style-type: none;
     grid-column: 1/ span 5;
     padding: 0.5em;
+    text-align: center;
 }
 
 .submit {
@@ -70,7 +71,7 @@ div {
 }
 
 .food{
-    margin-left:8em;
+    margin-left:1em;
 }
 
 
@@ -108,6 +109,22 @@ div {
 
 .b{
     text-decoration: none;
+}
+
+.expl{
+    list-style-type: none;
+    grid-column: 1/ span 5;
+    margin-top: 5em;
+    margin-right: 5em;
+    margin-left: 5em;
+    text-align: center;
+}
+
+#map{
+    margin-bottom: 5em;
+    margin-right: 3em;
+    margin-left: 3em;
+    margin-top: 2em;
 }
 
 .grid-footer {
