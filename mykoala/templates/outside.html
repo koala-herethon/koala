@@ -45,17 +45,17 @@
 <!--header-->
 <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">  
-     <a class="navbar-brand" href="#">Koala</a>
+     <a class="navbar-brand" href="../">Koala</a>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Inside <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../inside">Inside <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Outside <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../outside">Outside <span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
@@ -102,7 +102,7 @@
         <br><br><br>
 
         <div class="w3-container w3-center">
-            <input type="button" onclick="doDisplay();" class="btn btn-info disabled" value="완료!">
+            <input type="button" onclick="doDisplay();" class="btn btn-info disabled" value="다음 >>">
             
             <br>
             <div id ='myDIV' style="display: none;">
@@ -138,7 +138,7 @@
             // 현재 지도 중심좌표로 주소를 검색해서 지도 좌측 상단에 표시합니다
             searchAddrFromCoords(map.getCenter(), displayCenterInfo);
             
-            // 지도를 클릭했을 때 클릭 위치 좌표에 대한 주소정보를 표시하도록 이벤트를 등록합니다
+         
             kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
                 searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
                     if (status === kakao.maps.services.Status.OK) {
@@ -149,25 +149,22 @@
                                         '<span class="title">법정동 주소정보</span>' + 
                                         detailAddr + 
                                     '</div>';
-            
-                        // 마커를 클릭한 위치에 표시합니다 
+              
                         marker.setPosition(mouseEvent.latLng);
                         marker.setMap(map);
-            
-                        // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
+      
                         infowindow.setContent(content);
                         infowindow.open(map, marker);
                     }   
                 });
             });
             
-            // 중심 좌표나 확대 수준이 변경됐을 때 지도 중심 좌표에 대한 주소 정보를 표시하도록 이벤트를 등록합니다
             kakao.maps.event.addListener(map, 'idle', function() {
                 searchAddrFromCoords(map.getCenter(), displayCenterInfo);
             });
             
             function searchAddrFromCoords(coords, callback) {
-                // 좌표로 행정동 주소 정보를 요청합니다
+
                 geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);         
             }
             
@@ -200,6 +197,10 @@
                 <span id="centerAddr" ></span>
             </div>
 
+        </div>
+
+        <div>
+            <button onclick="location.href='outside_detail'" class="btn btn-info disabled">다음 단계</button>
         </div>
 
         <footer class="pt-4 my-md-5 pt-md-5 border-top">
