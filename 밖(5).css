@@ -1,6 +1,10 @@
+@font-face { font-family: 'NIXGONL-Vb'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONL-Vb.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'NIXGONL-Vb'
 }
 
 
@@ -18,7 +22,7 @@ div {
 }
 
 .grid-header{
-    background-color: #8B728E;
+    background-color:#B3A7AD;
     text-decoration: none;
     color: white;
     grid-column: 1 / span 5;
@@ -66,7 +70,7 @@ div {
 }
 
 .food{
-    margin-left:7em;
+    margin-left:8em;
 }
 
 
@@ -93,7 +97,7 @@ div {
 }
 
 .button{
-    background-color: white;
+    background-color:white;
     padding: 0.8em;
     margin-top: 0.5em;
     text-align: center;
