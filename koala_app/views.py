@@ -7,3 +7,13 @@ def main(requests):
 
 def outside(request):
     return render(request, 'outside.html')
+
+def inside(request):
+    return render(request, 'home(1).html')
+
+def outside_detail(request):
+    return render(request, '밖(5).html')
+
+def inside_detail(request):
+    return render(request, 'inside_detail.html')
+
