@@ -4,6 +4,25 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>코알라</title>
+        
+
+        <style>
+            .navbar{
+                
+                background-color : #B3A7AD !important;
+            }
+            
+            body{
+                background-color: #E2DAEC;
+            }
+
+            .grid-title{
+                margin-top: 100px;
+            }
+        </style>
+
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" href="/static/밖(5).css" type="text/css">
 
         <style>
@@ -16,26 +35,45 @@
             .distanceInfo .label {display:inline-block;width:50px;}
             .distanceInfo:after {content:none;}
         </style>
-    </head>
 
     <body>
-        <div class="grids">
-            <!--header-->
-            <div class="grid-header" >
-                <a href ="홈.html" class="grid-header" >HOME</a>
-                <a href="안.html" class="grid-header" >집</a>
-                <a href="밖.html" class="grid-header" >야외</a>     
-            </div>
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    </head>
+
+<body>
+<!--header-->
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">  
+     <a class="navbar-brand" href="#">Koala</a>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+    <!--<div class="collapse navbar-collapse" id="navbarCollapse">-->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" !important>Inside <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#" !important>Outside <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+    </header>
 
             <!--로고&타이틀-->
             <div class="grid-title">
                 <img class="logo" src="/static/img/logo.png" width="300" height="300"> 
-                <h1 id="title"><strong>⚫ 선택한 지역: 서울특별시 서대문구 신촌동 주변 ⚫</strong></h1>
+                <h3 id="title"><strong>선택한 지역: 서울특별시 서대문구 신촌동 주변</strong></h3>
             </div>
             
             <!--코스 선택지-->
             <div class="grid-content">
-                <h3>1. 각 테마별 추천 장소 중 원하는 곳을 선택해주세요!<br><br> Tip) 홈페이지, 리뷰, 길찾기 정보등을 활용해보세요. </h3> <br>
+                <h5>1. 각 테마별 추천 장소 중 원하는 곳을 선택해주세요!<br><br> Tip) 홈페이지, 리뷰, 길찾기 정보등을 활용해보세요. </h5> <br>
             <form action="서버주소" method="post">
                 <!--맛집-->
                 <div class="food">
@@ -196,7 +234,7 @@
             </div>
 
             <!--코스 지도-->
-                <div class="expl"><h3>2. 선택한 장소의 경로와 이동 거리를 알아보세요! <br><br> Tip) 지도를 마우스로 클릭하면 선 그리기가 시작되고, 오른쪽 마우스를 클릭하면 선 그리기가 종료됩니다.</h3>
+                <div class="expl"><h5>2. 선택한 장소의 경로와 이동 거리를 알아보세요! <br><br> Tip) 지도를 마우스로 클릭하면 선 그리기가 시작되고, 오른쪽 마우스를 클릭하면 선 그리기가 종료됩니다.</h5>
                 <div id="map" style="width:1000px;height:500px;"></div>
                 
                 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2feabaa50bda547fa9bf346b93e3003"></script>
@@ -478,10 +516,43 @@
                 </script>
         </div>
 
-        <!--footer-->
-        <div class="grid-footer">
-            <img class="likelion" src="/static/img/basiclogo_E_H_W.png" width="110">
-            <li>HERETHON 2020 사자에5</li>
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                  <div class="col-12 col-md">
+                    <img class="mb-2" src="../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+                    <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>Features</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Cool stuff</a></li>
+                      <li><a class="text-muted" href="#">Random feature</a></li>
+                      <li><a class="text-muted" href="#">Team feature</a></li>
+                      <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                      <li><a class="text-muted" href="#">Another one</a></li>
+                      <li><a class="text-muted" href="#">Last time</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Resource</a></li>
+                      <li><a class="text-muted" href="#">Resource name</a></li>
+                      <li><a class="text-muted" href="#">Another resource</a></li>
+                      <li><a class="text-muted" href="#">Final resource</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-md">
+                    <h5>About</h5>
+                    <ul class="list-unstyled text-small">
+                      <li><a class="text-muted" href="#">Team</a></li>
+                      <li><a class="text-muted" href="#">Locations</a></li>
+                      <li><a class="text-muted" href="#">Privacy</a></li>
+                      <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </footer>
         </div>
     </body>
 
