@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from koala_app import views
+import koala_app.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.main, name='main'),
+    path('outside/', koala_app.views.outside, name = 'outside'),
+    path('', koala_app.views.main, name='main'),
+    #path('', koala_app.views.home, name="home"),
+
 ]
